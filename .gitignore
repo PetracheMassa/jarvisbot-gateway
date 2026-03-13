@@ -1,0 +1,9 @@
+.venv/
+.python_packages/
+__pycache__/
+*.pyc
+.idea/
+.DS_Store
+local.settings.json
+.env
+.env.*
