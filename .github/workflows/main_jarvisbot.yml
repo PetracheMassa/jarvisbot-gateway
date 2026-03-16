@@ -1,4 +1,4 @@
-name: Manual deploy to Azure Function App
+name: Build and deploy Python project to Azure Function App - jarvisbot
 
 on:
   workflow_dispatch:
@@ -13,7 +13,7 @@ permissions:
   contents: read
 
 env:
-  AZURE_FUNCTIONAPP_NAME: jarvisbot
+  AZURE_FUNCTIONAPP_NAME: 'jarvisbot'
   AZURE_FUNCTIONAPP_PACKAGE_PATH: '.'
   PYTHON_VERSION: '3.13'
 
@@ -25,12 +25,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Setup Python version
         uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
-      - name: Log in to Azure with OIDC
+      - name: Login to Azure with OIDC
         uses: azure/login@v2
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
