@@ -1,9 +1,40 @@
-.venv/
-.python_packages/
+# Python
 __pycache__/
-*.pyc
-.idea/
-.DS_Store
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Azure Functions local/runtime artifacts
+.python_packages/
 local.settings.json
+
+# Secrets / env
 .env
 .env.*
+
+# IDE / Editor
+.idea/
+.vscode/
+
+# OS / misc
+.DS_Store
+Thumbs.db
+
+# Logs / temp
+*.log
+tmp/
+temp/
